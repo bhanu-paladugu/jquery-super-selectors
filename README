@@ -1,13 +1,8 @@
-Super Selectors is a jQuery plugin enabling better CSS selector support for older browsers
+SuperSelectors is a jQuery plugin enabling better CSS selector support for older browsers
 
-TODO:
-* Add appropriate rules on the fly, so that users won't need to include the classes in their CSS. This will involve modifying the regular expressions.
+No need to clutter your markup with extraneous classes solely to serve as styling hooks for legacy browsers (IE6 *cough*).
 
-
-WARNING:
-IE has a "fun" habit of discarding any style rules which contain selectors it cannot parse. This can cause unintended results. The only reliable workaround I've found is to declare your rules twice, so that the super-selector version will still be applied.
-
-So, instead of 
+Your stylesheets will be clean and forwards-compatible - no rules like:
 
 	div.example > :first-child,
 	div.example .first-child {
@@ -15,7 +10,7 @@ So, instead of
 	color: #f0f;
 	}
 
-You should write:
+or even:
 
 	div.example > :first-child {
 	background: #0f0;
@@ -26,3 +21,12 @@ You should write:
 	background: #0f0;
 	color: #f0f;
 	}
+	
+With SuperSelectors, your CSS can be:
+
+  div.example > :first-child {
+  background: #0f0;
+  color: #f0f;
+  }
+
+And everything is taken care of.
