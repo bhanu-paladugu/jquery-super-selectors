@@ -7,12 +7,6 @@ color: #521302;
 }
 
 #ex1 div.example p:empty {
-background: #eaeaea;
-color: #666;
-height: 1em; /* needed to ensure *something* renders */
-}
-
-#ex1 div.example p.empty {
 background: #c2f060;
 color: #5d5f2e;
 height: 1em; /* needed to ensure *something* renders */
@@ -27,11 +21,6 @@ color: #521302;
 }
 
 #ex2 div.example p:first {
-background: #eaeaea;
-color: #666;
-}
-
-#ex2 div.example p.first {
 background: #c2f060;
 color: #5d5f2e;
 }
@@ -45,11 +34,6 @@ color: #521302;
 }
 
 #ex3 div.example p:last {
-background: #eaeaea;
-color: #666;
-}
-
-#ex3 div.example p.last {
 background: #c2f060;
 color: #5d5f2e;
 }
@@ -62,12 +46,7 @@ background: #c92f05;
 color: #521302;
 }
 
-#ex4 div.example :nth-child(odd) {
-background: #eaeaea;
-color: #666;
-}
-
-#ex4 div.example p.odd {
+#ex4 div.example p:nth-child(odd) {
 background: #c2f060;
 color: #5d5f2e;
 }
@@ -81,11 +60,6 @@ color: #521302;
 }
 
 #ex5 div.example p:nth-child(even) {
-background: #eaeaea;
-color: #666;
-}
-
-#ex5 div.example p.even {
 background: #c2f060;
 color: #5d5f2e;
 }
@@ -99,11 +73,6 @@ color: #521302;
 }
 
 #ex6 div.example p + p {
-background: #eaeaea;
-color: #666;
-}
-
-#ex6 div.example p.next {
 background: #c2f060;
 color: #5d5f2e;
 }
@@ -117,11 +86,6 @@ color: #521302;
 }
 
 #ex7 div.example p ~ p {
-background: #eaeaea;
-color: #666;
-}
-
-#ex7 div.example p.sibling {
 background: #c2f060;
 color: #5d5f2e;
 }
@@ -135,11 +99,6 @@ color: #521302;
 }
 
 #ex8 div.example p:first-child  {
-background: #eaeaea;
-color: #666;
-}
-
-#ex8 div.example p.first-child {
 background: #c2f060;
 color: #5d5f2e;
 }
@@ -153,11 +112,6 @@ color: #521302;
 }
 
 #ex9 div.example p:last-child  {
-background: #eaeaea;
-color: #666;
-}
-
-#ex9 div.example p.last-child {
 background: #c2f060;
 color: #5d5f2e;
 }
@@ -171,11 +125,6 @@ color: #521302;
 }
 
 #ex10 div.example p:only-child  {
-background: #eaeaea;
-color: #666;
-}
-
-#ex10 div.example p.only-child {
 background: #c2f060;
 color: #5d5f2e;
 }
@@ -189,11 +138,6 @@ color: #521302;
 }
 
 #ex11 div.example > ul {
-background: #eaeaea;
-color: #666;
-}
-
-#ex11 div.example ul.child {
 background: #c2f060;
 color: #5d5f2e;
 }
@@ -208,12 +152,6 @@ color: #521302;
 }
 
 #ex12 div.example input[type="text"] {
-background: #eaeaea;
-border: 1px solid #eaeaea;
-color: #666;
-}
-
-#ex12 div.example input.text {
 background: #c2f060;
 border: 1px solid #c2f060;
 color: #5d5f2e;
@@ -229,12 +167,6 @@ color: #521302;
 }
 
 #ex13 div.example input[type="password"] {
-background: #eaeaea;
-border: 1px solid #eaeaea;
-color: #666;
-}
-
-#ex13 div.example input.password {
 background: #c2f060;
 border: 1px solid #c2f060;
 color: #5d5f2e;
@@ -251,12 +183,6 @@ color: #521302;
 }
 
 #ex14 div.example input[type="radio"] {
-background: #eaeaea;
-border: 1px solid #eaeaea;
-color: #666;
-}
-
-#ex14 div.example input.radio {
 background: #c2f060;
 border: 1px solid #c2f060;
 color: #5d5f2e;
@@ -271,12 +197,6 @@ color: #521302;
 }
 
 #ex15 div.example input[type="checkbox"] {
-background: #eaeaea;
-border: 1px solid #eaeaea;
-color: #666;
-}
-
-#ex15 div.example input.checkbox {
 background: #c2f060;
 border: 1px solid #c2f060;
 color: #5d5f2e;
@@ -292,12 +212,6 @@ color: #521302;
 }
 
 #ex16 div.example input[type="file"] {
-background: #eaeaea;
-border: 1px solid #eaeaea;
-color: #666;
-}
-
-#ex16 div.example input.file {
 background: #c2f060;
 border: 1px solid #c2f060;
 color: #5d5f2e;
@@ -313,12 +227,6 @@ color: #521302;
 }
 
 #ex17 div.example input[type="button"] {
-background: #eaeaea;
-border: 1px solid #eaeaea;
-color: #666;
-}
-
-#ex17 div.example input.button {
 background: #c2f060;
 border: 1px solid #c2f060;
 color: #5d5f2e;
@@ -334,12 +242,6 @@ color: #521302;
 }
 
 #ex18 div.example input[type="image"] {
-background: #eaeaea;
-border: 1px solid #eaeaea;
-color: #666;
-}
-
-#ex18 div.example input.image {
 background: #c2f060;
 border: 1px solid #c2f060;
 color: #5d5f2e;
@@ -355,12 +257,6 @@ color: #521302;
 }
 
 #ex19 div.example input[type="reset"] {
-background: #eaeaea;
-border: 1px solid #eaeaea;
-color: #666;
-}
-
-#ex19 div.example input.reset {
 background: #c2f060;
 border: 1px solid #c2f060;
 color: #5d5f2e;
@@ -376,12 +272,6 @@ color: #521302;
 }
 
 #ex20 div.example input[type="submit"] {
-background: #eaeaea;
-border: 1px solid #eaeaea;
-color: #666;
-}
-
-#ex20 div.example input.submit {
 background: #c2f060;
 border: 1px solid #c2f060;
 color: #5d5f2e;
@@ -396,11 +286,6 @@ color: #521302;
 }
 
 #ex21 div.example a[href$=".jpg"] {
-background: #eaeaea;
-color: #666;
-}
-
-#ex21 div.example a.jpeg {
 background: #c2f060;
 color: #5d5f2e;
 }
