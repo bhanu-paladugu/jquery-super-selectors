@@ -3,7 +3,7 @@
  * A jQuery plugin enabling better CSS selector support for older browsers
  *  by leveraging jQuery's excellent selectors
  * 
- * Version 1.1.1
+ * Version 1.1.2
  * Author: Chris Patterson
  *
  * License: GPL 3 http://www.gnu.org/licenses/gpl-3.0.html
@@ -49,10 +49,11 @@
       $(options.additionalElementHash[className]).addClass(className);
     }
 
-    function getMatches(CSS) {
+    function getMatches(CSS, path) {
       // We need to strip out any comments to make sure we don't apply styles inappropriately
       CSS = CSS.replace(/\/\*[\s\S]*?\*\//g, '');
-      dynamicCSS = CSS;
+			// Also need to update any pathnames for images, to account for relative paths where the CSS and webpage are in different directories
+      dynamicCSS = CSS.replace(/url\s*\(\s*['"]?([\w\.][\w\-\.\/]+)['"]?\s*\)/g, ("url('" + path + "$1')"));
 
       function _match_item(reg, className) {
         var fullSelector = new RegExp('[a-zA-Z0-9._+~#:\\s-]*' + reg, "gi");
@@ -128,18 +129,18 @@
 
     // Retrieve the CSS if it's a link or import, otherwise process the embedded CSS
     function getCSS(sheet) {
+    var docURL = String(window.location);
       if (sheet.href) {
         var RELATIVE = /^[\w\.]+[^:]*$/;
-        var docURL = String(window.location);
         var href = (RELATIVE.test(sheet.href)) ? (docURL.slice(0, docURL.lastIndexOf("/") + 1) + sheet.href) : sheet.href;
         $.ajax({
           url: href,
           success: function (response) {
-            getMatches(response);
+            getMatches(response, (href.slice(0, href.lastIndexOf("/") + 1)));
           }
         });
       } else {
-        getMatches(sheet.innerHTML);
+        getMatches(sheet.innerHTML, (docURL.slice(0, docURL.lastIndexOf("/") + 1)));
       }
     }
 
